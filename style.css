@@ -307,3 +307,109 @@ footer {
     scroll-behavior: auto !important;
   }
 }
+
+/* AniSuggests Project Card */
+.project-2 {
+    position: relative;
+    padding: 30px;
+    background: #111118;
+    border: 1px solid #292936;
+    border-radius: 16px;
+    color: #ffffff;
+    transition: all 0.35s ease;
+    overflow: hidden;
+}
+
+/* Purple glow effect */
+.project-2::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, #8b5cf6, #ec4899);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.35s ease;
+}
+
+.project-2:hover::before {
+    transform: scaleX(1);
+}
+
+.project-2:hover {
+    transform: translateY(-6px);
+    border-color: #8b5cf6;
+    box-shadow: 0 12px 35px rgba(139, 92, 246, 0.15);
+}
+
+/* Project title */
+.project-2 h1 {
+    font-size: 26px;
+    font-weight: 700;
+    margin: 0 0 14px;
+    color: #ffffff;
+    letter-spacing: -0.5px;
+}
+
+/* Highlight title on hover */
+.project-2 h1 {
+    transition: color 0.3s ease;
+}
+
+.project-2:hover h1 {
+    color: #c4b5fd;
+}
+
+/* Project description */
+.project-2 p {
+    font-size: 15px;
+    line-height: 1.8;
+    color: #a1a1b5;
+    margin: 0 0 24px;
+}
+
+/* View Project button */
+.project-2 a {
+    display: inline-block;
+    text-decoration: none;
+}
+
+.project-2 button {
+    padding: 11px 22px;
+    background: linear-gradient(135deg, #8b5cf6, #7c3aed);
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.project-2 button:hover {
+    background: linear-gradient(135deg, #a78bfa, #8b5cf6);
+    box-shadow: 0 5px 20px rgba(139, 92, 246, 0.3);
+    transform: translateY(-2px);
+}
+
+.project-2 button:active {
+    transform: scale(0.97);
+}
+
+/* Mobile responsive */
+@media (max-width: 600px) {
+    .project-2 {
+        padding: 22px;
+        border-radius: 12px;
+    }
+
+    .project-2 h1 {
+        font-size: 23px;
+    }
+
+    .project-2 p {
+        font-size: 14px;
+    }
+}
